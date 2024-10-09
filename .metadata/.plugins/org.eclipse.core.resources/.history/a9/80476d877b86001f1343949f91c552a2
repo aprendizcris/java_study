@@ -1,0 +1,25 @@
+package application;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Scanner;
+
+public class Program {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+		
+		System.out.print("Room number: ");
+		int roomNumber = sc.nextInt();
+		
+		System.out.print("Check-IN date (dd/mm/yyyy): ");
+		Date checkIn = sdf.parse(sc.next());
+		
+		
+
+		sc.close();
+	}
+
+}

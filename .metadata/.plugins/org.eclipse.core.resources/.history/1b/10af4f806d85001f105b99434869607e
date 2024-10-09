@@ -1,0 +1,58 @@
+package application;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Locale;
+import java.util.Scanner;
+
+import entities.Product;
+
+public class main {
+
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		List<Product> list = new ArrayList<>();
+		
+		System.out.print("Informe quantos produtos");
+		int n = sc.nextInt();
+		
+		for (int i=1;i<=n;i++) {
+			System.out.println("Produto #"+i+" dados:");
+			
+			System.out.print("Common, used or imported (c/u/i");
+			char tipo = sc.next().charAt(0);
+			sc.next();
+
+			System.out.print("Name: ");
+			String name = sc.nextLine();
+			
+			System.out.print("Price: ");
+			Double price = sc.nextDouble();
+
+			switch (tipo) {
+			case 'c':
+				list.add( new Product( "Tablet", 260));
+				break;
+			case 'u':
+				
+				break;
+			case 'i':
+				
+				break;
+			default:
+				break;
+			}
+			
+		}
+
+		System.out.println();
+		
+		for (Product prod : list) {
+			System.out.println( prod.toString() );
+		}
+		
+		sc.close();
+	}
+
+}

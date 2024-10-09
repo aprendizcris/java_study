@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class main {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		String[] vect = sc.nextLine().split(" ");
+		int position = sc.nextInt();
+		
+		System.out.println("Palavra: " + vect[position]);
+
+		try {
+			
+			
+		} catch (Exception e) {
+			
+		}
+
+		sc.close();
+	}
+
+}

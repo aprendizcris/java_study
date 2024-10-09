@@ -1,0 +1,30 @@
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class main {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Escreva uma frase");
+		String[] vect = sc.nextLine().split(" ");
+		
+		System.out.println("a frase gerou "+ vect.length +" palavras.");
+
+		System.out.print("Informe um número: ");
+		int position = sc.nextInt();
+
+		try {
+			System.out.println("Palavra: " + vect[position]);
+		} catch (InputMismatchException e) {
+			System.err.println("Vc deveria informar um número inteiro./n" + e.getMessage());
+		} catch (ArrayIndexOutOfBoundsException e) {
+			System.err.println("Vc informou um número maior./n" + e.getMessage());
+		} catch (Exception e) {
+			System.err.println("Só Deus sabe o que vc fez./n" + e.getLocalizedMessage());
+		}
+
+		sc.close();
+	}
+
+}
